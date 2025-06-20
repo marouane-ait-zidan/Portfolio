@@ -17,44 +17,53 @@ import { ReactComponent as SassImg } from './../../assets/images/sass.svg'
 import { ReactComponent as TypescriptImg } from './../../assets/images/typescript.svg'
 import { ReactComponent as SolidityImg } from './../../assets/images/solidity.svg'
 import { ReactComponent as PolygonImg } from './../../assets/images/polygon.svg'
+import { ReactComponent as LaravelImg } from './../../assets/images/laravel-2.svg'
+import { ReactComponent as ApachelImg } from './../../assets/images/apache.svg'
+import { ReactComponent as GithubImg } from './../../assets/images/github.svg'
+
+
+import filmdb from '../../assets/images/filmdb.jpg';
+import laravelFilamentImg from '../../assets/images/filament1.png';
+import behaviorDetectionImg from '../../assets/images/Impostor.jpg';
+
 
 const Data = [
     {
         id: 0,
-        img: "https://ik.imagekit.io/onyedika/phoneapp_oXM1Z9FA_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1667104369642",
+        img: laravelFilamentImg,
     },
     {
         id: 1,
-        img: "https://ik.imagekit.io/onyedika/slide/pipar-beta?ik-sdk-version=javascript-1.4.3&updatedAt=1664831519274",
+        img: filmdb,
     },
     {
         id: 2,
-        img: "https://ik.imagekit.io/onyedika/slide/pipar_peinACEKO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256618",
+        img: behaviorDetectionImg,
     },
-    {
-        id: 3,
-        img: "https://ik.imagekit.io/onyedika/slide/calender_S6GI-SE7_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256123",
-    },
-    {
-        id: 4,
-        img: "https://ik.imagekit.io/onyedika/slide/movie_Si8QWOouP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256396",
-    },
-    {
-        id: 5,
-        img: "https://ik.imagekit.io/onyedika/slide/natour_QGZwpr7Ta.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256510",
-    },
-    {
-        id: 6,
-        img: "https://ik.imagekit.io/onyedika/slide/ncehr_GV14iEwWG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256179",
-    },
-    {
-        id: 7,
-        img: "https://ik.imagekit.io/onyedika/slide/guvve_sUg2If5kc.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256276",
-    },
-    {
-        id: 8,
-        img: "https://ik.imagekit.io/onyedika/slide/web3-forum_2lXPIycqd.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256840",
-    },
+    // {
+    //     id: 3,
+    //     img: "https://ik.imagekit.io/onyedika/slide/calender_S6GI-SE7_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256123",
+    // },
+    // {
+    //     id: 4,
+    //     img: "https://ik.imagekit.io/onyedika/slide/movie_Si8QWOouP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256396",
+    // },
+    // {
+    //     id: 5,
+    //     img: "https://ik.imagekit.io/onyedika/slide/natour_QGZwpr7Ta.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256510",
+    // },
+    // {
+    //     id: 6,
+    //     img: "https://ik.imagekit.io/onyedika/slide/ncehr_GV14iEwWG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256179",
+    // },
+    // {
+    //     id: 7,
+    //     img: "https://ik.imagekit.io/onyedika/slide/guvve_sUg2If5kc.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256276",
+    // },
+    // {
+    //     id: 8,
+    //     img: "https://ik.imagekit.io/onyedika/slide/web3-forum_2lXPIycqd.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256840",
+    // },
 ];
 
 
@@ -146,13 +155,14 @@ function Home() {
             <div className="home-intro hidden">
                 <div className="content">
                 <div className="content-tertiary">
-                    <p><span>✌🏻</span> Hi there! I'm Onyedika</p>
+                    <p><span>✌🏻</span> Hi there! I'm Marouane Ait Zidan</p>
                 </div>
                 <div className="content-primary">
-                    <h1>a <span>Frontend Engineer</span>. I help startups <span>launch</span> and <span>grow</span> their products</h1>
+                    <h1>a <span>Full-Stack Developer</span>. I build <span>interactive web apps</span> and explore <span>AI</span>.</h1>
                 </div>
                 <div className="content-secondary">
-                    <p>I am a software engineer with more than four years of experience. Recognized as a practical and effective developer, experienced in leading cross-functional teams in a time-pressured setting to complete projects on schedule and within budget.</p>
+                    <p>I'm a Full-Stack Developer, Tech Enthusiast, and AI Explorer, currently working on web development projects that blend technology and management for my Bachelor's in Informatique Appliquée au Management. I'm passionate about building interactive web apps, exploring AI, and tech entrepreneurship.</p>
+
                 </div>
                 </div>
                 
@@ -830,11 +840,11 @@ function Home() {
                 </div>
                 <div className="box-content">
                 <div className="box-icon"><AngularImg className="icon" /></div>
-                <div className="box-text"><p>Angular</p></div>
+                <div className="box-text"><p>Bootstrap</p></div>
                 </div>
                 <div className="box-content">
                 <div className="box-icon"><NodeImg className="icon" /></div>
-                <div className="box-text"><p>Node</p></div>
+                <div className="box-text"><p>Next js</p></div>
                 </div>
                 <div className="box-content">
                 <div className="box-icon"><MongoImg className="icon" /></div>
@@ -850,7 +860,7 @@ function Home() {
                 </div>
                 <div className="box-content">
                 <div className="box-icon"><SassImg className="icon" /></div>
-                <div className="box-text"><p>Sass</p></div>
+                <div className="box-text"><p>PHP</p></div>
                 </div>
                 <div className="box-content">
                 <div className="box-icon"><TypescriptImg className="icon" /></div>
@@ -858,16 +868,28 @@ function Home() {
                 </div>
                 <div className="box-content">
                 <div className="box-icon"><SolidityImg className="icon" /></div>
-                <div className="box-text"><p>Solidity</p></div>
+                <div className="box-text"><p>Python</p></div>
                 </div>
                 <div className="box-content">
                 <div className="box-icon"><PolygonImg className="icon" /></div>
-                <div className="box-text"><p>Polygon</p></div>
+                <div className="box-text"><p>mySQL</p></div>
+                </div>
+                <div className="box-content">
+                <div className="box-icon"><LaravelImg className="icon" /></div>
+                <div className="box-text"><p>Laravel</p></div>
+                </div>
+                <div className="box-content">
+                <div className="box-icon"><ApachelImg className="icon" /></div>
+                <div className="box-text"><p>Apache</p></div>
+                </div>
+                <div className="box-content">
+                <div className="box-icon"><GithubImg className="icon" /></div>
+                <div className="box-text"><p>Github</p></div>
                 </div>
                 </div>
             </div>
             <div className="showroom-section hidden">
-            <div className="showroom-title"><h2>Showroom</h2></div>
+                <div className="showroom-title"><h2>Showroom</h2></div>
             <div className="showroom">
                 <div className="showroom-background" style={Styles}></div>
                 <ProjectSlider setBackground={setBackground} />
@@ -876,7 +898,7 @@ function Home() {
             <button class="butt" onClick={nav}>All Project details</button>
             </div>
             </div>
-            <div className="featured hidden">
+            {/* <div className="featured hidden">
                 <div className="featured-title"><h2>Featured</h2></div>
                 <div className="featured-box">
                     <div className="article">
@@ -894,12 +916,14 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="quote hidden">
             <div className="quote-body">
                 <QuoteLeft className="left" />
             <div className="quote-body-content">
-                <p>There's no nobility in playing small. Be different<span>!</span></p>
+                <p>Code is like humor. When you have to explain it, it’s bad.
+                    {/* <span>!</span> */}
+                    </p>
             </div>
             <QuoteRight className="right" />
             </div>

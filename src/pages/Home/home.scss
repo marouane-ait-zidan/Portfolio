@@ -717,7 +717,7 @@
             grid-area: quote;
             p {
                 margin: 0;
-                font-size: 2.5rem;
+                font-size: 2.3rem;
                 font-weight: 900;
                 text-transform: capitalize;
                 opacity: .8;
@@ -1121,6 +1121,7 @@
       align-items: flex-start;
       margin: 0;
       padding: 1rem;
+      padding-bottom: 3.5rem;
       @media (min-width: 1025px) and (max-width: 1300px){
           padding: .8rem;
     }
@@ -1181,8 +1182,8 @@
       }
       span {
           display: flex;
-          justify-content: space-between;
-          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.5rem;
           width: 25%;
           @media (min-width: 760px) and (max-width: 1024px) {
             width: 33%;
@@ -1194,7 +1195,7 @@
             width: 70%;
         }
           .stack {
-            margin: 0;
+            margin-bottom: 0.5rem;
             background: #1e2128;
             color: #FFFFF4;
             padding: .3rem .6rem;

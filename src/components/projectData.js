@@ -1,65 +1,48 @@
+import filmdb from '../assets/images/filmdb.jpg';
+import laravelFilamentImg from '../assets/images/filament1.png';
+import behaviorDetectionImg from '../assets/images/Impostor.jpg';
+
 export const ProjectData = [
     {
-        title: "PhoneBook App",
-        description: "Manage your phone contacts the easy way. create, update and delete your personal contacts all from one app. This is a MERN stack app with react redux toolkit. Find source code on my github",
-        img: "https://ik.imagekit.io/onyedika/phoneapp_oXM1Z9FA_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1667104369642",
-        stack: "React",
-        link: "https://phone-rosy.vercel.app/"
+      title: "Laravel Filament",
+      description:
+        "A complete stock management application with a user-friendly interface, developed using Laravel Filament, React.js, Livewire, Inertia.js, and integrated with Stripe for payment processing. This project facilitates the tracking of products, users, and transactions in a modern and intuitive environment.",
+      img: laravelFilamentImg,
+      stack: "Laravel / Filament / React.js / Livewire / Stripe / Inertia.js",
+      link: "https://mega.nz/file/8yZAhTxQ#jy5PKxVbQLtETRVHVVVIIQqPZ02UmWIGX8EEQnTgVg4",
     },
     {
-        title: "Pipar Beta",
-        description: "Start A Company And Manage Operations Across The Globe Right From Where You Are. Still in beta mode but the Authentication feature works. [DESKTOP MODE ONLY]",
-        img: "https://ik.imagekit.io/onyedika/slide/pipar-beta?ik-sdk-version=javascript-1.4.3&updatedAt=1664831519274",
-        stack: "Angular",
-        link: "https://pipar-beta.vercel.app/"
+      title: "FilmDB2",
+      description:
+        "A web platform to discover popular, upcoming, and trending movies and TV shows. Users can view ratings, descriptions, and search for content. Built with React.js, Supabase, and Bootstrap to ensure a smooth and responsive user experience.",
+      img: filmdb,
+      stack: "React.js / Supabase / Bootstrap",
+      link: "https://github.com/marouane-ait-zidan/FilmDB2",
     },
     {
-        title: "Pipar",
-        description: "A digital web3 platform for tokenizing company shares/stocks. These assets can be fungible or non-fungible",
-        img: "https://ik.imagekit.io/onyedika/slide/pipar_peinACEKO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256618",
-        stack: "Angular",
-        link: "https://pipar.vercel.app/"
+      title: "Impostor",
+      description:
+        "A real-time online multiplayer game built with React.js and Firebase. Up to 6 players join a lobby and receive the same footballer name—except for one, the impostor. The impostor must hide the fact they got a different name, while the others try to guess who it is. The game includes a real-time messaging system.",
+      img: behaviorDetectionImg,
+      stack: "React.js / Firebase",
+      link: "https://github.com/marouane-ait-zidan/Impostor",
     },
     {
-        title: "Company Calender",
-        description: "Know legal requirements and dates the company must keep to avoid legal santions after a company is incorporated",
-        img: "https://ik.imagekit.io/onyedika/slide/calender_S6GI-SE7_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256123",
-        stack: "Angular",
-        link: "https://company-calender-front.vercel.app/"
+      title: "GESTION DE STOCK",
+      description:
+        "A web-based stock management system supporting multiple storage locations and tracking the depreciation of employee-related resources. Built with PHP and Bootstrap, it provides a simple yet effective solution for inventory management in businesses.",
+      // img: require("../../assets/images/gestion-de-stock.png"),
+      stack: "PHP / Bootstrap",
+      link: "https://github.com/marouane-ait-zidan/GESTION_DE_STOCK",
     },
     {
-        title: "React Movie",
-        description: "Stay upto date with trending movies, see the authors of these movies and their casts. Also view the ratings!",
-        img: "https://ik.imagekit.io/onyedika/slide/movie_Si8QWOouP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256396",
-        stack: "React",
-        link: "https://elastic-archimedes-a45a17.netlify.app/"
+      title: "Simple Store",
+      description:
+        "A minimalist e-commerce platform built with React and Node.js, designed to provide a seamless shopping experience with a focus on performance and user-friendly design.",
+      // img: require("../../assets/images/simple-store.png"),
+      stack: "React / Node.js",
+      link: "https://github.com/marouane-ait-zidan/Simple-Store",
     },
-    {
-        title: "Natour",
-        description: "A platform that helps you discover the most intriguing locations for your vacations. Book hotels and spa's at a cheaper rate",
-        img: "https://ik.imagekit.io/onyedika/slide/natour_QGZwpr7Ta.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256510",
-        stack: "CSS",
-        link: "https://natours-neon.vercel.app/"
-    },
-    {
-        title: "NCEHR",
-        description: "An NGO that focuses on solving the problem of climate change in africa. They're also inter-disciplinary with various academic institutions involved",
-        img: "https://ik.imagekit.io/onyedika/slide/ncehr_GV14iEwWG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256179",
-        stack: "Angular",
-        link: "https://ncher-new.vercel.app/"
-    },
-    {
-        title: "Gruvve",
-        description: "web3 startup accelerator, both in finance and human resource. They look for web3 contributors who want to make an impact in the web3 space",
-        img: "https://ik.imagekit.io/onyedika/slide/guvve_sUg2If5kc.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256276",
-        stack: "Node/React",
-        link: "https://gruvve-front.vercel.app/"
-    },
-    {
-        title: "Web3 Forum",
-        description: "A web3 forum built on top of polygon. Anyone can add comments after signing in with metamask. This was a follow-up tutorial by pointer.gg",
-        img: "https://ik.imagekit.io/onyedika/slide/web3-forum_2lXPIycqd.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651255256840",
-        stack: "Polygon",
-        link: "https://comments-with-polygon-beta.vercel.app/"
-    },
-];
+  ];
+  
+  
