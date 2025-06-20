@@ -1,7 +1,10 @@
 {
-  "name": "onyedika",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
