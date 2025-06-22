@@ -22,13 +22,13 @@ function Work() {
         'Simple-Store',
     ];
 
-    // Map project names to local images
+    // Map project names to arrays of local images (screenshots)
     const imageMap = {
-        // 'Simple-Store': simpleStoreImg,
-        // 'GESTION_DE_STOCK': gestionDeStockImg,
-        'laravel_filament': laravelFilamentImg,
-        'FilmDB2': filmdbImg,
-        'Impostor': behaviorDetectionImg
+        // 'Simple-Store': [simpleStoreImg1, simpleStoreImg2, simpleStoreImg3],
+        // 'GESTION_DE_STOCK': [gestionDeStockImg1, gestionDeStockImg2, gestionDeStockImg3],
+        'laravel_filament': [laravelFilamentImg, laravelFilamentImg, laravelFilamentImg], // Replace with actual screenshots
+        'FilmDB2': [filmdbImg, filmdbImg, filmdbImg], // Replace with actual screenshots
+        'Impostor': [behaviorDetectionImg, behaviorDetectionImg, behaviorDetectionImg] // Replace with actual screenshots
     };
 
     // Map project names to custom descriptions
@@ -93,21 +93,22 @@ function Work() {
                 {!loading && !error && projects.map((project, index) => (
                     <div key={project.id} className={`single ${index % 2 === 1 ? 'reverse' : ''}`}>
                         <div className="single-img">
-                            <img 
-                                src={imageMap[project.name] || 'https://via.placeholder.com/300x200?text=Project+Image'} 
-                                alt={`${project.name} Project`} 
-                            />
+                            <div className="screenshots-container">
+                                {(imageMap[project.name] || ['https://via.placeholder.com/300x200?text=Project+Image']).map((image, imgIndex) => (
+                                    <img 
+                                        key={imgIndex}
+                                        src={image} 
+                                        alt={`${project.name} Screenshot ${imgIndex + 1}`} 
+                                        className="screenshot"
+                                    />
+                                ))}
+                            </div>
                         </div>
                         <div className="single-detail">
                             <h4>{project.name}</h4>
                             <p>
                                 <span>Description:</span> {descriptionMap[project.name] || 'No description available.'}
                             </p>
-                            <div className="button-wrap">
-                                <a href={project.html_url} target="_blank" rel="noopener noreferrer">
-                                    <button className="button">Visit →</button>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 ))}

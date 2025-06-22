@@ -143,7 +143,7 @@ function Header() {
                         <li className="menu-one"><NavLink className="nav-link" onClick={check} to="/">Home</NavLink></li>
                         <li className="menu-two"><NavLink className="nav-link" onClick={check} to="/work">Work</NavLink></li>
                         <li className="menu-three"><a className="nav-link" href="https://medium.com/@marouaneaitzidan" target="_blank">Writing</a></li>
-                        <li className="menu-four"><a className="nav-link" href="https://drive.google.com/file/d/1jRn1cWg8fuPxRn1OgTDpI1blb-hE_dej/view?usp=drive_link" target="_blank">Resume</a></li>
+                        <li className="menu-four"><a className="nav-link" href="https://drive.google.com/file/d/1lFDlpSmqNbIE-u1jcG9dTEC3AzScIzzp/view?usp=drive_link" target="_blank">Resume</a></li>
                         <li className="menu-five"><a className="nav-link" href="mailto:marouaneaitzidan@gmail.com" target="_blank">Contact</a></li>
                     </ul>
                     </div>    
