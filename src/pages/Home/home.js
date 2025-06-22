@@ -20,6 +20,8 @@ import { ReactComponent as PolygonImg } from './../../assets/images/polygon.svg'
 import { ReactComponent as LaravelImg } from './../../assets/images/laravel-2.svg'
 import { ReactComponent as ApachelImg } from './../../assets/images/apache.svg'
 import { ReactComponent as GithubImg } from './../../assets/images/github.svg'
+import { ReactComponent as Wordpress } from './../../assets/images/wordpress.svg'
+import { ReactComponent as Kafka } from './../../assets/images/kafka.svg'
 
 
 import filmdb from '../../assets/images/filmdb.jpg';
@@ -893,7 +895,16 @@ function Home() {
                 <div className="box-icon"><GithubImg className="icon" /></div>
                 <div className="box-text"><p>Github</p></div>
                 </div>
+                <div className="box-content">
+                <div className="box-icon"><Wordpress className="icon" /></div>
+                <div className="box-text"><p>Wordpress</p></div>
                 </div>
+                <div className="box-content">
+                <div className="box-icon"><Kafka className="icon" /></div>
+                <div className="box-text"><p>Kafka</p></div>
+                </div>
+                </div>
+                
             </div>
             <div className="showroom-section hidden">
                 <div className="showroom-title"><h2>Showroom</h2></div>
