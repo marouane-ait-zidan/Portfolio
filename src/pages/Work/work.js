@@ -14,14 +14,15 @@ import Streamlit2 from '../../assets/images/streamlit2.png';
 
 function Work() {
     const [projects, setProjects] = useState([]);
-    const [loading, setLoading] = useState(false); // Set to false since we're not fetching from API
+    const [loading, setLoading] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState({});
 
     // Define the projects you want to display
     const selectedProjects = [
         {
             id: 1,
             name: 'laravel_filament',
-            html_url: '#' // You can add actual URLs if needed
+            html_url: '#'
         },
         {
             id: 2,
@@ -48,10 +49,10 @@ function Work() {
     // Map project names to arrays of local images (screenshots)
     const imageMap = {
         'Behavior_Analyzer': [Streamlit1, Streamlit2],
-        // 'GESTION_DE_STOCK': ['https://via.placeholder.com/700x398?text=GESTION+DE+STOCK+Screenshot'], // Add your actual screenshots
+        'GESTION_DE_STOCK': ['https://via.placeholder.com/700x398?text=GESTION+DE+STOCK+Screenshot'],
         'laravel_filament': [laravelFilamentImg, laravelFilamentImg2, laravelFilamentImg3],
         'FilmDB2': [filmdbImg, filmdbImg2, filmdbImg3],
-        'Impostor': [behaviorDetectionImg, behaviorDetectionImg, behaviorDetectionImg] // Replace with actual different screenshots
+        'Impostor': [behaviorDetectionImg, behaviorDetectionImg, behaviorDetectionImg]
     };
 
     // Map project names to custom descriptions
@@ -67,11 +68,40 @@ function Work() {
         'Behavior_Analyzer': 'A data analysis web app built with Python, Flask, and MongoDB Atlas. Using Selenium and Geckodriver, the app scrapes GitHub posts and comments in real-time, then processes and analyzes them to detect sentiment (positive, negative, neutral), identify the most frequently used words, and highlight the most engaged users. Ideal for gaining insights into developer discussions and trends on GitHub.',
     };
 
+    // Initialize current image index for each project
     useEffect(() => {
-        // Simply set the predefined projects instead of fetching from GitHub
+        const initialIndexes = {};
+        selectedProjects.forEach(project => {
+            initialIndexes[project.name] = 0;
+        });
+        setCurrentImageIndex(initialIndexes);
         setProjects(selectedProjects);
         setLoading(false);
     }, []);
+
+    // Navigation functions
+    const nextImage = (projectName) => {
+        const images = imageMap[projectName] || [];
+        setCurrentImageIndex(prev => ({
+            ...prev,
+            [projectName]: (prev[projectName] + 1) % images.length
+        }));
+    };
+
+    const prevImage = (projectName) => {
+        const images = imageMap[projectName] || [];
+        setCurrentImageIndex(prev => ({
+            ...prev,
+            [projectName]: prev[projectName] === 0 ? images.length - 1 : prev[projectName] - 1
+        }));
+    };
+
+    const goToImage = (projectName, index) => {
+        setCurrentImageIndex(prev => ({
+            ...prev,
+            [projectName]: index
+        }));
+    };
 
     return (
         <div className="work">
@@ -89,28 +119,63 @@ function Work() {
             <div className="projects">
                 {loading && <p>Loading projects...</p>}
                 {!loading && projects.length === 0 && <p>No projects found.</p>}
-                {!loading && projects.map((project, index) => (
-                    <div key={project.id} className={`single ${index % 2 === 1 ? 'reverse' : ''}`}>
-                        <div className="single-img">
-                            <div className="screenshots-container">
-                                {(imageMap[project.name] || ['https://via.placeholder.com/300x200?text=Project+Image']).map((image, imgIndex) => (
+                {!loading && projects.map((project, index) => {
+                    const images = imageMap[project.name] || ['https://via.placeholder.com/300x200?text=Project+Image'];
+                    const currentIndex = currentImageIndex[project.name] || 0;
+                    
+                    return (
+                        <div key={project.id} className={`single ${index % 2 === 1 ? 'reverse' : ''}`}>
+                            <div className="single-img">
+                                <div className="image-slider">
+                                    {/* Navigation Arrows */}
+                                    {images.length > 1 && (
+                                        <>
+                                            <button 
+                                                className="slider-nav prev" 
+                                                onClick={() => prevImage(project.name)}
+                                                aria-label="Previous image"
+                                            >
+                                                &#8249;
+                                            </button>
+                                            <button 
+                                                className="slider-nav next" 
+                                                onClick={() => nextImage(project.name)}
+                                                aria-label="Next image"
+                                            >
+                                                &#8250;
+                                            </button>
+                                        </>
+                                    )}
+                                    
+                                    {/* Current Image */}
                                     <img 
-                                        key={imgIndex}
-                                        src={image} 
-                                        alt={`${project.name} Screenshot ${imgIndex + 1}`} 
-                                        className="screenshot"
+                                        src={images[currentIndex]} 
+                                        alt={`${project.name} Screenshot ${currentIndex + 1}`} 
+                                        className="screenshot slider-image"
                                     />
-                                ))}
+                                    {images.length > 1 && (
+                                        <div className="slider-dots">
+                                            {images.map((_, imgIndex) => (
+                                                <button
+                                                    key={imgIndex}
+                                                    className={`dot ${imgIndex === currentIndex ? 'active' : ''}`}
+                                                    onClick={() => goToImage(project.name, imgIndex)}
+                                                    aria-label={`Go to image ${imgIndex + 1}`}
+                                                />
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                            <div className="single-detail">
+                                <h4>{project.name}</h4>
+                                <p>
+                                    <span>Description:</span> {descriptionMap[project.name] || 'No description available.'}
+                                </p>
                             </div>
                         </div>
-                        <div className="single-detail">
-                            <h4>{project.name}</h4>
-                            <p>
-                                <span>Description:</span> {descriptionMap[project.name] || 'No description available.'}
-                            </p>
-                        </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );
