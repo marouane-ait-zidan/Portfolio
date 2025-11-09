@@ -1,6 +1,9 @@
 import filmdb from '../assets/images/filmdb.jpg';
 import laravelFilamentImg from '../assets/images/filament1.png';
 import behaviorDetectionImg from '../assets/images/Impostor.jpg';
+import huntingWebsiteImg from '../assets/images/huntingWebsiteImg.jpg';
+import benwistudios from '../assets/images/benwistudios.jpg';
+import bitm from '../assets/images/bitm.jpg';
 
 export const ProjectData = [
     {
@@ -28,21 +31,37 @@ export const ProjectData = [
       link: "https://github.com/marouane-ait-zidan/Impostor",
     },
     {
-      title: "GESTION DE STOCK",
+      title: "Hunting Website Morocco",
       description:
-        "A web-based stock management system supporting multiple storage locations and tracking the depreciation of employee-related resources. Built with PHP and Bootstrap, it provides a simple yet effective solution for inventory management in businesses.",
-      // img: require("../../assets/images/gestion-de-stock.png"),
-      stack: "PHP / Bootstrap",
-      link: "https://github.com/marouane-ait-zidan/GESTION_DE_STOCK",
+        "A modern hunting information platform built with React.js and Vite, offering users a clean and interactive way to explore hunting seasons, permitted zones, regulations, and species across Morocco. The website delivers fast navigation, a responsive layout, and a clear structure to help hunters access reliable information with ease.",
+      img: huntingWebsiteImg,
+      stack: "React.js / Vite / TailwindCSS",
+      link: "https://hunting-website-morocco.vercel.app/"
     },
     {
-      title: "Simple Store",
+      title: "Benwi Studios",
       description:
-        "A minimalist e-commerce platform built with React and Node.js, designed to provide a seamless shopping experience with a focus on performance and user-friendly design.",
-      // img: require("../../assets/images/simple-store.png"),
-      stack: "React / Node.js",
-      link: "https://github.com/marouane-ait-zidan/Simple-Store",
+        "A custom Shopify e-commerce store designed with a clean and modern layout. The project focuses on smooth product browsing, optimized loading speed, and a user-friendly shopping flow tailored for a professional online brand experience.",
+      img: benwistudios,
+      stack: "Shopify ",
+      link: "https://benwistudios.com/"
     },
+    {
+      title: "Baby In The Making",
+      description:
+        "A Shopify baby-product boutique featuring soft colors, clear navigation, and optimized product pages. Built to deliver a warm and simple shopping experience for parents while keeping the store lightweight and easy to manage.",
+      img: bitm,
+      stack: "Shopify ",
+      link: "https://babyinthemaking.com/"
+    },
+    // {
+    //   title: "Simple Store",
+    //   description:
+    //     "A minimalist e-commerce platform built with React and Node.js, designed to provide a seamless shopping experience with a focus on performance and user-friendly design.",
+    //   // img: require("../../assets/images/simple-store.png"),
+    //   stack: "React / Node.js",
+    //   link: "https://github.com/marouane-ait-zidan/Simple-Store",
+    // },
   ];
   
   

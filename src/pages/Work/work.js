@@ -11,6 +11,14 @@ import laravelFilamentImg3 from '../../assets/images/filament3.png';
 import behaviorDetectionImg from '../../assets/images/Impostor.jpg';
 import Streamlit1 from '../../assets/images/streamlit1.png';
 import Streamlit2 from '../../assets/images/streamlit2.png';
+import huntingWebsiteImg from '../../assets/images/huntingWebsiteImg.jpg';
+import huntingWebsiteImg2 from '../../assets/images/huntingWebsiteImg2.jpg';
+import huntingWebsiteImg3 from '../../assets/images/huntingWebsiteImg3.jpg';
+import benwistudios from '../../assets/images/benwistudios.jpg';
+import benwistudios2 from '../../assets/images/benwistudios2.jpg';
+import bitm from '../../assets/images/bitm.jpg';
+import bitm2 from '../../assets/images/bitm2.jpg';
+import bitm3 from '../../assets/images/bitm3.jpg';
 
 function Work() {
     const [projects, setProjects] = useState([]);
@@ -31,19 +39,40 @@ function Work() {
         },
         {
             id: 3,
-            name: 'Impostor',
-            html_url: '#'
+            name: 'Hunting_Website_Morocco',
+            html_url: 'https://hunting-website-morocco.vercel.app/'
         },
-        {
-            id: 4,
-            name: 'GESTION_DE_STOCK',
-            html_url: '#'
-        },
+        // {
+        //     id: 3,
+        //     name: 'Impostor',
+        //     html_url: '#'
+        // },
+        // {
+        //     id: 4,
+        //     name: 'GESTION_DE_STOCK',
+        //     html_url: '#'
+        // },
         {
             id: 5,
             name: 'Behavior_Analyzer',
             html_url: '#'
-        }
+        },
+        // {
+        //     id: 6,
+        //     name: 'Hunting_Website_Morocco',
+        //     html_url: 'https://hunting-website-morocco.vercel.app/'
+        // }
+        {
+    id: 5,
+    name: 'Benwi_Studios',
+    html_url: 'https://benwistudios.com/'
+},
+{
+    id: 6,
+    name: 'Baby_In_The_Making',
+    html_url: 'https://babyinthemaking.com/'
+},
+
     ];
 
     // Map project names to arrays of local images (screenshots)
@@ -52,7 +81,10 @@ function Work() {
         'GESTION_DE_STOCK': ['https://via.placeholder.com/700x398?text=GESTION+DE+STOCK+Screenshot'],
         'laravel_filament': [laravelFilamentImg, laravelFilamentImg2, laravelFilamentImg3],
         'FilmDB2': [filmdbImg, filmdbImg2, filmdbImg3],
-        'Impostor': [behaviorDetectionImg, behaviorDetectionImg, behaviorDetectionImg]
+        'Impostor': [behaviorDetectionImg, behaviorDetectionImg, behaviorDetectionImg],
+        'Hunting_Website_Morocco': [huntingWebsiteImg, huntingWebsiteImg2, huntingWebsiteImg3],
+        'Benwi_Studios': [benwistudios, benwistudios2],
+        'Baby_In_The_Making': [bitm, bitm2,bitm3],
     };
 
     // Map project names to custom descriptions
@@ -66,6 +98,12 @@ function Work() {
         'GESTION_DE_STOCK': 'A stock management website supporting multiple warehouses and tracking employee amortization. Built with PHP and Bootstrap to provide a simple yet effective business inventory solution.',
         
         'Behavior_Analyzer': 'A data analysis web app built with Python, Flask, and MongoDB Atlas. Using Selenium and Geckodriver, the app scrapes GitHub posts and comments in real-time, then processes and analyzes them to detect sentiment (positive, negative, neutral), identify the most frequently used words, and highlight the most engaged users. Ideal for gaining insights into developer discussions and trends on GitHub.',
+    
+        'Hunting_Website_Morocco': 'A modern hunting information platform built with React.js and Vite, offering users a clean and interactive way to explore hunting seasons, permitted zones, regulations, and species across Morocco.',
+    
+        'Benwi_Studios': 'A custom Shopify e-commerce store with a clean, modern interface designed for smooth product browsing and a streamlined shopping experience.',
+
+        'Baby_In_The_Making': 'A Shopify boutique focused on baby products, featuring soft visuals, simple navigation, and optimized product pages for a warm shopping experience.',
     };
 
     // Initialize current image index for each project
